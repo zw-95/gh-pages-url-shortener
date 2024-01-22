@@ -26,30 +26,6 @@
         font-size: 16px;
         color: rgb(69, 69, 69);
       }
-      .copy-button {
-        float: inline-end;
-        background: transparent !important;
-        color: rgb(69, 69, 69);
-        padding: 5px 5px;
-        border-radius: 5px;
-        border: none;
-        cursor: pointer;
-        font-size: 12px;
-        box-shadow: none;
-        transition: box-shadow 0.5s ease;
-      }
-      .copy-button:hover {
-        float: inline-end;
-        background: transparent !important;
-        color: rgba(5,150,105,1);
-        padding: 5px 5px;
-        border-radius: 5px;
-        border: none;
-        cursor: pointer;
-        font-size: 12px;
-        box-shadow: none;
-        transition: box-shadow 0.5s ease;
-      }
     </style>
     <style type="text/css">
       body {
@@ -65,28 +41,7 @@
           url
         );
       }
-      function copyText() {
-          const textToCopy = document.querySelector(".bodyText");
 
-          // 创建一个新的textarea元素，并将要复制的文字设置为其value
-          const textarea = document.createElement("textarea");
-          textarea.value = textToCopy.innerText;
-
-          // textarea添加到文档中
-          document.body.appendChild(textarea);
-
-          // 选中textarea中的文字
-          textarea.select();
-
-          // 复制选中文字到剪贴板
-          document.execCommand("copy");
-
-        // 移除textarea
-          document.body.removeChild(textarea);
-
-          // 在控制台输出复制成功的消息
-          console.log("已复制剪贴板：", textarea.value);
-      }
       function returnHome() {
         window.location.replace(
           location.protocol +
